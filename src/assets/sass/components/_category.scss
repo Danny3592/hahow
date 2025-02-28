@@ -1,0 +1,21 @@
+.category {
+  display: flex;
+  width: 8rem;
+  align-items: stretch;
+  align-self: stretch;
+  position: relative;
+  &__button {
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: $color-grey-light-2;
+    border-radius: 1rem;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+  &__icon {
+    transform: translate(1.2rem, 0rem);
+  }
+}

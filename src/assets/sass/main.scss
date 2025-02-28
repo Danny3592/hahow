@@ -3,5 +3,21 @@
 @import './pages/home';
 
 @import './layout/nav';
+@import './layout/header';
 
 @import './base/base';
+@import './base/utilities';
+
+//NAV
+@import './components/search';
+@import './components/category';
+@import './components/discount';
+@import './components/user-nav';
+@import './components/learning';
+@import './components/chat-frame';
+@import './components/new-class';
+@import './components/want-learn';
+@import './components/explore';
+@import './components/pick-class';
+
+

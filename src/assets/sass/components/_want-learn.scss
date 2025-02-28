@@ -1,0 +1,91 @@
+.want-learn {
+  &-box {
+    width: 114rem;
+    margin: 0 auto;
+  }
+  &__title {
+    &--main {
+      font-size: 2rem;
+      padding-right: 1rem;
+      border-right: 1px solid $color-grey-dark-2;
+    }
+    &--sub {
+      font-size: 1.4rem;
+      color: $color-grey-dark-2;
+      margin-left: 1rem;
+    }
+  }
+
+  &__more {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+  &__cards {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+  }
+
+  &__img-box {
+    border-radius: 1rem;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+  }
+  &__tag {
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $color-primary-light;
+    color: $color-primary;
+  }
+
+  &__author {
+    padding: 1rem 0;
+    font-size: $default-font-size;
+    color: $color-grey-dark-2;
+  }
+
+  &__status {
+    display: flex;
+    font-size: $default-font-size;
+  }
+
+  &__day {
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+
+  &__percentage {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+
+  &__price {
+    display: inline-block;
+    font-size: $default-font-size;
+    color: $color-grey-dark-1;
+    padding: 1rem 0 ;
+  }
+
+  &__good {
+    display: inline-block;
+    font-size: $default-font-size;
+    padding: 0.3rem;
+    background-color: $color-primary-light;
+    color: $color-primary;
+  }
+  .header {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+}
+
