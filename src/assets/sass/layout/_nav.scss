@@ -1,0 +1,24 @@
+.nav-box {
+  
+  position: fixed;
+  z-index: 9999;
+  transform: translateX(-50%);
+  left: 50%;
+  background: $color-white;
+
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $color-grey-light-1;
+  box-shadow: 0 1px 1px rgba($color-black, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  &__logo {
+    width: 13rem;
+  }
+}
