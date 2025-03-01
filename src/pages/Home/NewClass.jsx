@@ -1,23 +1,22 @@
 import React from 'react';
+import SectionTitle from '../../components/SectionTitle';
+import { exampleImg } from '../../../util/home-img';
 
 const NewClass = () => {
   return (
     <section className="new-class">
       <div className="new-class-box">
-        <div className="header">
-          <div className="new-class__title">
-            <span className="new-class__title--main">最新募資課程</span>
-            <span className="new-class__title--sub">募資加入最優惠</span>
-          </div>
-          <div className="new-class__more">
-            更多 <i class="fa-solid fa-caret-right"></i>
-          </div>
-        </div>
+        <SectionTitle
+          mainTitle="最新募資課程"
+          subTitle="募資加入最優惠"
+          hasMore={true}
+        />
+
         <div className="new-class__cards">
           <div className="new-class__card new-class__card--1">
             <div className="new-class__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="new-class__img"
               />
@@ -43,7 +42,7 @@ const NewClass = () => {
           <div className="new-class__card new-class__card--1">
             <div className="new-class__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="new-class__img"
               />
@@ -69,7 +68,7 @@ const NewClass = () => {
           <div className="new-class__card new-class__card--1">
             <div className="new-class__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="new-class__img"
               />

@@ -1,4 +1,4 @@
-import { mainImg } from '../../../util/home-img';
+import { exampleImg, mainImg } from '../../../util/home-img';
 import ChatFrame from '../../components/ChatFrame';
 
 const Learning = () => {
@@ -28,7 +28,7 @@ const Learning = () => {
               <div className='learning__img-box'>
                 <img
                   className="learning__img learning__img--1"
-                  src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                  src={exampleImg}
                   alt=""
                 />
               </div>
@@ -51,7 +51,7 @@ const Learning = () => {
             <div className="u-flex u-gap-sm">
               <img
                 className="learning__img learning__img--1"
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
               />
               <div className="u-flex u-flex-col ">

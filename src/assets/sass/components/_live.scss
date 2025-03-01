@@ -1,0 +1,57 @@
+.live {
+  &__img-box {
+    width: 40rem;
+    border-radius: 2rem;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 2rem;
+  }
+
+  &__title {
+    font-size: $default-font-size;
+  }
+
+  &__tag {
+    background: #e6f7ff;
+    color: #449dfc;
+    font-size: 1.4rem;
+  }
+
+  &__card {
+    width: 50%;
+    display: flex;
+    margin-top: 5rem;
+    gap: 3rem;
+  }
+
+  &__status {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  &__replay {
+    font-weight: bold;
+    color: #449dfc;
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__author {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+    margin-top: 1rem;
+  }
+  &__free{
+    color: $color-grey-dark-1;
+    font-size: $default-font-size;
+    
+  }
+}
