@@ -1,0 +1,27 @@
+.section-header {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  .title {
+    &--main {
+      font-size: 2rem;
+      padding-right: 1rem;
+      border-right: 1px solid $color-grey-dark-2;
+    }
+    &--sub {
+      font-size: 1.4rem;
+      color: $color-grey-dark-2;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
+  .more {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+    cursor: pointer;
+  }
+
+}
+
+

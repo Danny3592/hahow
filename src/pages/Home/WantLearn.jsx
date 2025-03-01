@@ -1,4 +1,5 @@
 import React from 'react';
+import { exampleImg } from '../../../util/home-img';
 
 const WantLearn = () => {
   return (
@@ -14,7 +15,7 @@ const WantLearn = () => {
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="want-learn__img"
               />
@@ -39,7 +40,7 @@ const WantLearn = () => {
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="want-learn__img"
               />
@@ -65,7 +66,7 @@ const WantLearn = () => {
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="want-learn__img"
               />
@@ -91,7 +92,7 @@ const WantLearn = () => {
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
               <img
-                src="https://images.hahow.in/images/5b8726df297df5001efb75c0"
+                src={exampleImg}
                 alt=""
                 className="want-learn__img"
               />

@@ -1,19 +1,23 @@
 .u-flex {
-  display: flex!important;
+  display: flex !important;
 }
 .u-flex-col {
-  flex-direction: column!important;
+  flex-direction: column !important;
 }
 
 .u-gap-sm {
-  gap: 2rem!important;
+  gap: 2rem !important;
 }
 
 .u-gap-md {
-  gap: 4rem!important;
+  gap: 4rem !important;
 }
 
+.u-w-full {
+  width: 100% !important;
+}
 
-.u-w-full{
-  width: 100%!important;
+.u-box {
+  width: 114rem !important;
+  margin: 0 auto !important;
 }
