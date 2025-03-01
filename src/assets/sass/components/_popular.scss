@@ -3,8 +3,8 @@
     position: relative;
     display: flex;
     max-width: 100%;
-    height: 110rem;
     margin-top: 10rem;
+
     padding-top: 3rem;
     padding-bottom: 30rem;
   }
@@ -26,19 +26,18 @@
     background: #002533;
     color: $color-white;
     max-width: 100%;
-
     display: flex;
     flex: 1;
   }
 
   &__list {
     margin-top: 8rem;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 2rem 8rem;
     grid-auto-flow: column;
+    padding-bottom: 3rem;
   }
 
   &__content {
@@ -117,11 +116,13 @@
     color: $color-primary;
     text-align: right;
     position: relative;
-
+    padding: 5rem 0rem;
+    cursor: pointer;
+ 
     &::after {
-      transform: translateY(1.2rem);
-      position: absolute;
+      transform: translateY(6rem);
       content: '';
+      position: absolute;
       display: inline-block;
       right: 12rem;
       top: 0;
