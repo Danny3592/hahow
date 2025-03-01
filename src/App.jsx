@@ -7,6 +7,9 @@ import Explore from './pages/Home/Explore';
 import PickClass from './pages/Home/PickClass';
 import LiveActivity from './pages/Home/LiveActivity';
 import Popular from './pages/Home/Popular';
+import Article from './pages/Home/Article';
+import Creators from './pages/Home/Creators';
+import Cooperators from './pages/Home/Cooperators';
 
 const App = () => {
   return (
@@ -19,11 +22,12 @@ const App = () => {
       <Explore />
       <PickClass />
       <LiveActivity />
-      <Popular/>
-      <div className="article"></div>
-      <div className="creators"></div>
-      <div className="cooperators"></div>
+      <Popular />
+      <Article />
+      <Creators/>
+      <Cooperators/>
       <div className="cta"></div>
+      <footer className="footer"></footer>
     </>
   );
 };
