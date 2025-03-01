@@ -160,4 +160,3 @@ const Popular = () => {
 };
 
 export default Popular;
-feature/home-popular
