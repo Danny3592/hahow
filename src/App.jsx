@@ -11,6 +11,7 @@ import Article from './pages/Home/Article';
 import Creators from './pages/Home/Creators';
 import Cooperators from './pages/Home/Cooperators';
 import Cta from './pages/Home/Cta';
+import Footer from './pages/Home/Footer';
 
 const App = () => {
   return (
@@ -28,7 +29,7 @@ const App = () => {
       <Creators />
       <Cooperators />
       <Cta />
-      <footer className="footer"></footer>
+      <Footer/>
     </>
   );
 };
