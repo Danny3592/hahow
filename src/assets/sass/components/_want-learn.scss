@@ -26,15 +26,41 @@
     justify-content: space-between;
   }
 
+  &__card {
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__card:hover {
+    .want-learn__bookmark {
+      bottom: 2rem;
+    }
+  }
+  &__bookmark {
+    position: absolute;
+    font-size: 2.5rem;
+    right: 2rem;
+    z-index: 20;
+    bottom: -3rem;
+    transition: all 0.5s;
+  }
   &__img-box {
+    position: relative;
+    overflow: hidden;
     border-radius: 1rem;
   }
   &__img {
+    transition: all 0.5s;
     width: 100%;
     border-radius: 1rem;
   }
 
   &__title {
+    margin-top: 1rem;
     font-size: 1.8rem;
   }
   &__tag {
@@ -54,7 +80,12 @@
 
   &__status {
     display: flex;
+    gap: 2rem;
+    align-items: center;
     font-size: $default-font-size;
+    i {
+      margin-right: 1rem;
+    }
   }
 
   &__day {
@@ -71,7 +102,7 @@
     display: inline-block;
     font-size: $default-font-size;
     color: $color-grey-dark-1;
-    padding: 1rem 0 ;
+    padding: 1rem 0;
   }
 
   &__good {
@@ -88,4 +119,3 @@
     margin-bottom: 2rem;
   }
 }
-

@@ -1,21 +1,32 @@
 .article {
-  margin-top: -23rem;
+  margin-top: -0rem;
 
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap:4rem;
-    grid-row-gap:2rem;
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
   }
   &__card {
+  
     width: 100%;
     border-bottom: 1px solid $color-grey-dark-2;
- 
+
+    &:hover {
+      .article__img-box {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+
     &--top {
+      cursor: pointer;
       width: 100%;
       display: flex;
       gap: 3rem;
+      
     }
 
     &--bottom {
@@ -27,6 +38,7 @@
   }
 
   &__info {
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,6 +50,7 @@
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    
   }
   &__author {
     display: flex;
@@ -51,10 +64,12 @@
   }
 
   &__title {
+    cursor: pointer;
     font-size: $default-font-size;
     margin-bottom: 2rem;
   }
   &__text {
+    cursor: pointer;
     font-size: 1.4rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -67,10 +82,12 @@
   &__img-box {
     width: 100%;
     align-self: end;
+    overflow: hidden;
   }
 
   &__img {
     width: 100%;
+    transition: all .5s;
   }
 
   &__caregory {

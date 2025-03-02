@@ -1,118 +1,125 @@
 import React from 'react';
 import { exampleImg } from '../../../util/home-img';
+import SectionTitle from './../../components/SectionTitle';
+import StarEvaluate from '../../components/StarEvaluate';
+import ClassPeople from '../../components/Class/ClassPeople';
+import ClassDuration from '../../components/Class/ClassDuration';
+import ClassAuthor from '../../components/Class/ClassAuthor';
+import ClassPrice from '../../components/Class/ClassPrice';
+import ClassTag from '../../components/Class/ClassTag';
+
+{
+  /* <i class="fa-solid fa-bookmark new-class__bookmark"></i> */
+}
 
 const WantLearn = () => {
   return (
     <section className="want-learn">
       <div className="want-learn-box">
-        <div className="header">
-          <div className="want-learn__title">
-            <span className="want-learn__title--main">猜你想學</span>
-            <span className="want-learn__title--sub">與你心電感應</span>
-          </div>
-        </div>
+        <SectionTitle
+          mainTitle="猜你想學"
+          subTitle="與你心電感應"
+          hasMore={false}
+        />
         <div className="want-learn__cards">
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="want-learn__img"
-              />
+              <i class="fa-solid fa-bookmark want-learn__bookmark"></i>
+              <img src={exampleImg} alt="" className="want-learn__img" />
             </div>
             <div className="want-learn__title">
-              <span className="want-learn__tag">課程</span>
+              <ClassTag type="class" />
               資料變決策！Excel x AI 升級職場數據分析力
             </div>
-            <div className="want-learn__author">by 彭其捷</div>
+            <ClassAuthor author="彭其捷" />
             <div className="want-learn__status">
-              <div className="want-learn__time">12.2小時</div>
-              <div className="want-learn__people">49</div>
+              <div>
+                <StarEvaluate score="2.0" count='30' />
+              </div>
+              <div>
+                <ClassDuration time="18" />
+              </div>
+              <div>
+                <ClassPeople people="48" />
+              </div>
             </div>
-            <div className="want-learn__progressbar"></div>
             <div>
-              <span className="want-learn__price">NT$2,780</span>
-            </div>
-            <div className="want-learn__good">
-              <i class="fa-solid fa-fire"></i>熱門課程
+              <ClassPrice price="2,300" />
             </div>
           </div>
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="want-learn__img"
-              />
+              <i class="fa-solid fa-bookmark want-learn__bookmark"></i>
+              <img src={exampleImg} alt="" className="want-learn__img" />
             </div>
             <div className="want-learn__title">
-              <span className="want-learn__tag">課程</span>
+              <ClassTag type="class" />
               資料變決策！Excel x AI 升級職場數據分析力
             </div>
-            <div className="want-learn__author">by 彭其捷</div>
+            <ClassAuthor author="彭其捷" />
             <div className="want-learn__status">
-              <div className="want-learn__day">倒數募資33天</div>
-              <div className="want-learn__percentage">417%</div>
+              <div>
+                <StarEvaluate score="2.0" count='30' />
+              </div>
+              <div>
+                <ClassDuration time="18" />
+              </div>
+              <div>
+                <ClassPeople people="48" />
+              </div>
             </div>
-            <div className="want-learn__progressbar"></div>
             <div>
-              <span className="want-learn__price">NT$2,780</span>
-              <span className="want-learn__origin-price">NT$4,100</span>
-            </div>
-            <div className="want-learn__hot">
-              <i class="fa-solid fa-fire"></i>熱門課程
+              <ClassPrice price="2,300" />
             </div>
           </div>
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="want-learn__img"
-              />
+              <i class="fa-solid fa-bookmark want-learn__bookmark"></i>
+              <img src={exampleImg} alt="" className="want-learn__img" />
             </div>
             <div className="want-learn__title">
-              <span className="want-learn__tag">課程</span>
+              <ClassTag type="class" />
               資料變決策！Excel x AI 升級職場數據分析力
             </div>
-            <div className="want-learn__author">by 彭其捷</div>
+            <ClassAuthor author="彭其捷" />
             <div className="want-learn__status">
-              <div className="want-learn__day">倒數募資33天</div>
-              <div className="want-learn__percentage">417%</div>
+              <div>
+                <StarEvaluate score="2.0" count='30' />
+              </div>
+              <div>
+                <ClassDuration time="18" />
+              </div>
+              <div>
+                <ClassPeople people="48" />
+              </div>
             </div>
-            <div className="want-learn__progressbar"></div>
             <div>
-              <span className="want-learn__price">NT$2,780</span>
-              <span className="want-learn__origin-price">NT$4,100</span>
-            </div>
-            <div className="want-learn__hot">
-              <i class="fa-solid fa-fire"></i>熱門課程
+              <ClassPrice price="2,300" />
             </div>
           </div>
           <div className="want-learn__card want-learn__card--1">
             <div className="want-learn__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="want-learn__img"
-              />
+              <i class="fa-solid fa-bookmark want-learn__bookmark"></i>
+              <img src={exampleImg} alt="" className="want-learn__img" />
             </div>
             <div className="want-learn__title">
-              <span className="want-learn__tag">課程</span>
+              <ClassTag type="class" />
               資料變決策！Excel x AI 升級職場數據分析力
             </div>
-            <div className="want-learn__author">by 彭其捷</div>
+            <ClassAuthor author="彭其捷" />
             <div className="want-learn__status">
-              <div className="want-learn__day">倒數募資33天</div>
-              <div className="want-learn__percentage">417%</div>
+              <div>
+                <StarEvaluate score="2.0" count='30' />
+              </div>
+              <div>
+                <ClassDuration time="18" />
+              </div>
+              <div>
+                <ClassPeople people="48" />
+              </div>
             </div>
-            <div className="want-learn__progressbar"></div>
             <div>
-              <span className="want-learn__price">NT$2,780</span>
-              <span className="want-learn__origin-price">NT$4,100</span>
-            </div>
-            <div className="want-learn__hot">
-              <i class="fa-solid fa-fire"></i>熱門課程
+              <ClassPrice price="2,300" />
             </div>
           </div>
         </div>

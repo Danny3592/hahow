@@ -1,10 +1,10 @@
-const ChatFrame = ({ children }) => {
+const ChatFrame = ({ children, color }) => {
   return (
     <div className="chat-frame-box">
-      <div className="chat-frame">
+      <div className="chat-frame" style={{ background: color }}>
         <div className="content">{children}</div>
+        <div className="chat-root" style={{ background: color }}></div>
       </div>
-      <div className="chat-root"></div>
     </div>
   );
 };

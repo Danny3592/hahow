@@ -24,6 +24,74 @@
     font-size: 2rem;
   }
 
+  &__card {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__card:hover {
+    .pick-class__img {
+      transform: scale(1.2);
+    }
+    .pick-class__pop {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .pick-class__card--bottom {
+      transform: translate(2rem, -3rem);
+    }
+  }
+
+  &__card--bottom {
+    transition: all 0.5s;
+  }
+
+  &__img {
+    transition: all 0.5s;
+  }
+
+  &__img-box {
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  &__pop {
+    z-index: 100;
+    transition: all 0.5s;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: -83%;
+    font-size: 1.6rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__pop-box {
+    padding: 1.5rem 0;
+  }
+  &__class-status {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__pop-list {
+    span {
+      display: block;
+    }
+  }
+
+  &__pop-button {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    color: $color-primary;
+
+    border: 1px solid $color-primary-dark;
+  }
+
   &__text {
     display: -webkit-box;
     -webkit-line-clamp: 2;

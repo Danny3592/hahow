@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionTitle from '../../components/SectionTitle';
 import { exampleImg } from '../../../util/home-img';
+import ClassTag from '../../components/Class/ClassTag';
+// import ImageBox from './ImgBox';
 
 const NewClass = () => {
   return (
@@ -15,15 +17,16 @@ const NewClass = () => {
         <div className="new-class__cards">
           <div className="new-class__card new-class__card--1">
             <div className="new-class__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="new-class__img"
-              />
+              <i class="fa-solid fa-bookmark new-class__bookmark"></i>
+              <span className="new-class__promote">限時優惠</span>
+              <img src={exampleImg} alt="" className="new-class__img" />
             </div>
+
+            {/* <span className="class-img__promote">限時優惠</span> */}
+
             <div className="new-class__title">
-              <span className="new-class__tag">課程</span>
-              資料變決策！Excel x AI 升級職場數據分析力
+              <ClassTag type="class" /> 資料變決策！Excel x AI
+              升級職場數據分析力
             </div>
             <div className="new-class__author">by 彭其捷</div>
             <div className="new-class__status">
@@ -36,20 +39,18 @@ const NewClass = () => {
               <span className="new-class__origin-price">NT$4,100</span>
             </div>
             <div className="new-class__hot">
-              <i class="fa-solid fa-fire"></i>熱門課程
+              <ClassTag type="hot" />
             </div>
           </div>
           <div className="new-class__card new-class__card--1">
             <div className="new-class__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="new-class__img"
-              />
+              <i class="fa-solid fa-bookmark new-class__bookmark"></i>
+              <span className="new-class__promote">限時優惠</span>
+              <img src={exampleImg} alt="" className="new-class__img" />
             </div>
             <div className="new-class__title">
-              <span className="new-class__tag">課程</span>
-              資料變決策！Excel x AI 升級職場數據分析力
+              <ClassTag type="class" /> 資料變決策！Excel x AI
+              升級職場數據分析力
             </div>
             <div className="new-class__author">by 彭其捷</div>
             <div className="new-class__status">
@@ -61,20 +62,17 @@ const NewClass = () => {
               <span className="new-class__price">NT$2,780</span>
               <span className="new-class__origin-price">NT$4,100</span>
             </div>
-            <div className="new-class__hot">
-              <i class="fa-solid fa-fire"></i>熱門課程
-            </div>
+            <ClassTag type="hot" />
           </div>
           <div className="new-class__card new-class__card--1">
             <div className="new-class__img-box">
-              <img
-                src={exampleImg}
-                alt=""
-                className="new-class__img"
-              />
+              <i class="fa-solid fa-bookmark new-class__bookmark"></i>
+
+              <span className="new-class__promote">限時優惠</span>
+              <img src={exampleImg} alt="" className="new-class__img" />
             </div>
             <div className="new-class__title">
-              <span className="new-class__tag">課程</span>
+              <ClassTag type="class" />
               資料變決策！Excel x AI 升級職場數據分析力
             </div>
             <div className="new-class__author">by 彭其捷</div>
@@ -86,9 +84,6 @@ const NewClass = () => {
             <div>
               <span className="new-class__price">NT$2,780</span>
               <span className="new-class__origin-price">NT$4,100</span>
-            </div>
-            <div className="new-class__hot">
-              <i class="fa-solid fa-fire"></i>熱門課程
             </div>
           </div>
         </div>

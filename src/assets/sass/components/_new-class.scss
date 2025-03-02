@@ -8,16 +8,55 @@
     gap: 5rem;
     justify-content: space-between;
   }
+  &__card {
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__promote {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    display: inline-block;
+    background: #fa8c16;
+    color: $color-white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0 0 0.4rem 0;
+  }
+  &__card:hover {
+    .new-class__bookmark {
+      bottom: 2rem;
+    }
+  }
 
+  //////////
+  &__bookmark {
+    position: absolute;
+    font-size: 2.5rem;
+    right: 2rem;
+    z-index: 20;
+    bottom: -3rem;
+    transition: all 0.5s;
+  }
   &__img-box {
+    position: relative;
+    overflow: hidden;
     border-radius: 1rem;
   }
   &__img {
+    transition: all 0.5s;
     width: 100%;
     border-radius: 1rem;
   }
+  ///////////
 
   &__title {
+    margin-top: 1rem;
     font-size: 1.8rem;
   }
   &__tag {
@@ -82,5 +121,4 @@
     justify-content: space-between;
     margin-bottom: 2rem;
   }
-  
 }
