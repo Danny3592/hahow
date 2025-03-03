@@ -12,13 +12,12 @@ import Creators from './pages/Home/Creators';
 import Cooperators from './pages/Home/Cooperators';
 import Cta from './pages/Home/Cta';
 import Footer from './pages/Home/Footer';
-import HeaderPop from './components/HeaderPop';
-
+import HeaderPop from './components/Header/HeaderPop';
 
 const App = () => {
   return (
     <>
-      {/* <MainNav />
+      <MainNav />
       <Banner />
       <Learning />
       <NewClass />
@@ -31,8 +30,7 @@ const App = () => {
       <Creators />
       <Cooperators />
       <Cta />
-      <Footer /> */}
-      <HeaderPop />
+      <Footer />
     </>
   );
 };

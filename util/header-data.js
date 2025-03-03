@@ -157,9 +157,11 @@ export const exploreData2 = [
     content: [
       {
         name: '所有領域',
+
         subCategories: [
           {
             name: '語言',
+            description: '選擇你有興趣的領域',
             subCategories: [
               {
                 name: '日文',
@@ -195,6 +197,7 @@ export const exploreData2 = [
           },
           {
             name: '程式設計',
+            description: '選擇你有興趣的領域',
             subCategories: [
               {
                 name: '前端開發',
@@ -216,6 +219,7 @@ export const exploreData2 = [
           },
           {
             name: '設計',
+            description: '選擇你有興趣的領域',
             subCategories: [
               {
                 name: '平面設計',

@@ -1,45 +1,87 @@
 .header-pop {
-  height: 100vh;
-  width: 100%;
-  background-color: grey;
-  font-size: 3rem;
-  &__content {
-    height: 60rem;
-    width: 100rem;
-    outline: 1px solid black;
-    margin: 0 auto;
-    margin-top: 3rem;
-    display: flex;
-    background-color: #fff;
+  &-box {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
   }
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  background: #fff;
-
-  width: 200px;
-  position: relative;
-}
-
-.menu__item {
-  padding: 10px;
-  cursor: pointer;
-  
-  transition: all 0.3s ease;
-}
-
-.menu__item:hover {
-  background: #ddd;
-}
-
-.submenu {
+  &-box {
+    position: relative;
+  }
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 auto;
+  height: 45rem;
+  width: 40rem;
+  background: white;
+  border-radius: 1rem;
+  z-index: 1000;
+  // padding: 2rem;
+  box-shadow: 0 1rem 4rem rgba($color-black, 0.2);
+  margin-top: 1rem;
   position: absolute;
-  top: 0;
-  left: 100%;
-  background: #fff;
-  border: 1px solid #ddd;
-  min-width: 200px;
-  display: block;
+  top: 0.5rem;
+  &__root {
+    width: 10rem;
+    height: 5rem;
+    bottom: -5rem;
+    clip-path: polygon(50% 0%, 20% 99%, 80% 99%);
+    transform: scale(1);
+    z-index: 100;
+    position: absolute;
+    background: white;
+  }
+
+  &__button-box {
+    position: absolute;
+    background-color: $color-primary-light;
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+    bottom: -58rem;
+    left: -30rem;
+    width: 40.2rem;
+    z-index: 1000;
+    display: flex;
+    border-radius: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 5rem;
+  }
+
+  &__cart-items {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__cart-price {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  &__cart-item {
+    font-size: $default-font-size;
+  }
+
+  &__cart-i {
+    color: $color-primary;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+  }
+
+  &__button {
+    border: none;
+    background-color: $color-primary;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    width: 100%;
+    border-radius: 1rem;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
 }
