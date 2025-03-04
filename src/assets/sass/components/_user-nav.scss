@@ -194,7 +194,7 @@
 
   &__photo-box {
     color: #000;
-  
+
     &:hover .header-pop-box {
       // opacity: 0;
       // visibility: hidden;
@@ -313,5 +313,23 @@
     width: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
+  }
+}
+
+.category {
+  position: relative;
+  &__pop {
+    top: 2rem;
+    left: -15rem;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+  }
+  &:hover &__pop {
+    opacity: 1;
+    visibility: visible;
   }
 }

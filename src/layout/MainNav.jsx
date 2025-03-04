@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import HeaderPop from '../components/Header/HeaderPop';
 import { exampleImg, mainImg } from '../../util/home-img';
 import LearningCard from '../components/Header/LearningCard';
 import ClassTag from '../components/Class/ClassTag';
+import HeaderListPop from '../components/Header/HeaderPopMenu';
+import { exploreData2 } from '../../util/header-data';
 
 const MainNav = () => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const categoryTimer = useRef();
+
   return (
     <div className="nav-box">
       <nav className="nav">
@@ -18,8 +23,12 @@ const MainNav = () => {
 
         <div className="category">
           <button className="category__button">
-            探索<i class="fa-solid fa-caret-down category__icon "></i>
+            探索
+            <i class="fa-solid fa-caret-down category__icon "></i>
           </button>
+          <div className="category__pop">
+            <HeaderListPop data={exploreData2} />
+          </div>
 
           <div className="category__board">
             <div className="category__list category__list--1"></div>
@@ -57,7 +66,7 @@ const MainNav = () => {
               rootPositon={-2}
               blockPosition={-30}
               backgroundColor="white"
-              type='learning'
+              type="learning"
             >
               <div className="learning-pop__learning-list">
                 <div className="learning-pop__continue">

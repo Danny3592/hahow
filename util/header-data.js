@@ -1,3 +1,5 @@
+import { exampleImg } from './home-img';
+
 export const exploreData = [
   {
     title: '領域分類',
@@ -185,11 +187,57 @@ export const exploreData2 = [
                 subCategories: [
                   {
                     name: '初級英語',
-                    subCategories: [{ name: '發音練習' }, { name: '基本會話' }],
+                    subCategories: [
+                      {
+                       
+                        src: exampleImg,
+                        author: '彭其捷',
+                        score: '2.0',
+                        count: '30',
+                        time: '18',
+                        price: '2,300',
+                        people: '48',
+                        cardTitle: '資料變決策！Excel x AI 升級職場數據分析力1',
+                      },
+                      {
+                        
+                        src: exampleImg,
+                        author: '彭其捷',
+                        score: '2.0',
+                        count: '30',
+                        time: '18',
+                        price: '2,300',
+                        people: '48',
+                        cardTitle: '資料變決策！Excel x AI 升級職場數據分析力2',
+                      },
+                    ],
                   },
                   {
                     name: '中級英語',
-                    subCategories: [{ name: '寫作技巧' }, { name: '閱讀理解' }],
+                    subCategories: [
+                      {
+                        
+                        src: exampleImg,
+                        author: '彭其捷',
+                        score: '2.0',
+                        count: '30',
+                        time: '18',
+                        price: '2,300',
+                        people: '48',
+                        cardTitle: '資料變決策！Excel x AI 升級職場數據分析力3',
+                      },
+                      {
+                    
+                        src: exampleImg,
+                        author: '彭其捷',
+                        score: '2.0',
+                        count: '30',
+                        time: '18',
+                        price: '2,300',
+                        people: '48',
+                        cardTitle: '資料變決策！Excel x AI 升級職場數據分析力6',
+                      },
+                    ],
                   },
                 ],
               },

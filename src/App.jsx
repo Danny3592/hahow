@@ -17,7 +17,7 @@ import HeaderListPop from './components/Header/HeaderListPop';
 const App = () => {
   return (
     <>
-      {/* <MainNav />
+      <MainNav />
       <Banner />
       <Learning />
       <NewClass />
@@ -30,8 +30,8 @@ const App = () => {
       <Creators />
       <Cooperators />
       <Cta />
-      <Footer /> */}
-      <HeaderListPop />
+      <Footer />
+      
     </>
   );
 };

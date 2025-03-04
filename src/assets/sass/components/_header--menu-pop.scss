@@ -1,13 +1,10 @@
 .header-pop-menu {
   height: 100vh;
   width: 100%;
-  background-color: grey;
-  padding-top: 6rem;
   &__content {
     font-size: 2rem;
-
     width: 100rem;
-    height: 60rem;
+    height: 50rem;
     margin: 0 auto;
     position: relative;
   }
@@ -22,16 +19,23 @@
     position: absolute;
     height: 100%;
     width: 20rem;
+    padding-bottom: 5rem;
 
     &--1 {
+      background-color: #f5f7f9;
+      padding-left: 3rem;
       left: 3rem;
+      box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
       li:hover {
         color: $color-primary;
       }
       li {
         word-wrap: break-word;
-        margin-bottom: 2rem;
+        padding-bottom: 2rem;
         list-style: none;
+        padding: 1rem 1rem;
+        padding-bottom: 2rem;
+
         h4 {
           padding: 0;
           margin: 0;
@@ -49,21 +53,31 @@
     }
 
     &--2 {
-      left: 15rem;
-      width: 20rem;
+      box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
+      left: 20rem;
+      width: 22rem;
       top: 0;
-      border-radius: 0 1rem 1rem  0  ;
+      border-radius: 0 1rem 1rem 0;
     }
     &--3 {
-      border-radius: 1rem;
-      left: 15rem;
-      width: 20rem;
+      box-shadow: 0 .5rem .5rem rgba($color-black, 0.1);
+      border-left: 1px solid black;
+      border-radius: 0 1rem 1rem 0;
+      left: 20rem;
+      width: 22rem;
       top: 0;
     }
     &--4 {
-      border-radius: 1rem;
-      left: 15rem;
-      width: 20rem;
+      box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
+      padding: 0;
+      padding-left: 1rem;
+      padding-top: 1rem;
+
+      word-wrap: break-word;
+      border-left: 1px solid black;
+      border-radius: 0 1rem 1rem 0;
+      left: 20rem;
+      width: 40rem;
       top: 0;
     }
   }
