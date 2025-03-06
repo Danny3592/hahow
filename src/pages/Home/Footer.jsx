@@ -4,8 +4,8 @@ import { qrCode } from '../../../util/home-img';
 const Footer = () => {
   return (
     <footer className="footer ">
-      <div className="footer-box u-box">
-        <div className="footer__list--about">
+      <div className="footer-box">
+        <div className="footer__list footer__list--about">
           <div className="footer__title">關於</div>
           <ul>
             <li>
@@ -31,7 +31,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="footer__list--help">
+        <div className="footer__list footer__list--help">
           <div className="footer__title">幫助</div>
           <ul>
             <li>

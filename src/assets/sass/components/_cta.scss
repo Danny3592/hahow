@@ -10,6 +10,12 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    @include respond(tab-land) {
+      max-width: 100%;
+    }
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
   &__text {
     width: 85%;
@@ -23,22 +29,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include respond(tab-port) {
+      width: 100%;
+      order: 2;
+    }
   }
   &__right {
     width: 50%;
+    @include respond(tab-port) {
+      width: 100%;
+      order: 1;
+    }
   }
 
   &__cards {
+    margin: 0 auto;
     margin-top: 9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    width: 90%;
   }
 
   &__card {
     width: 100%;
-    background: $color-white;
     border-radius: 2rem;
     position: relative;
     overflow: hidden;
@@ -46,12 +61,88 @@
     align-items: center;
     justify-content: space-around;
     line-height: 2;
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.5s;
+
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
+    }
+
+    &:hover {
+      transform: translateY(0.3rem);
+    }
+    i {
+      transition: all 0.5s;
+    }
+    &:hover i {
+      transform: translateX(1rem);
+    }
+
+    &--1 {
+      transition: all 0.5s ease-in-out;
+      background: radial-gradient(
+          circle at -20% 200%,
+          rgba($color-primary, 0.9) 20%,
+          rgba($color-primary, 0.2) 60%,
+          transparent 100%
+        ),
+        linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 1)
+        );
+      background-size: 100% 100%;
+      &:hover {
+        background-size: 200% 200%;
+      }
+    }
+
+    &--2 {
+      transition: all 0.5s ease-in-out;
+      background: radial-gradient(
+          circle at -20% 200%,
+          rgba(#fffe8e, 0.9) 20%,
+          rgba(#fffe8e, 0.2) 60%,
+          transparent 100%
+        ),
+        linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 1)
+        );
+      background-size: 100% 100%;
+      &:hover {
+        background-size: 200% 200%;
+      }
+    }
+
+    &--3 {
+      transition: all 0.5s ease-in-out;
+      background: radial-gradient(
+          circle at -20% 200%,
+          rgba(#65ddff, 0.9) 20%,
+          rgba(#65ddff, 0.2) 60%,
+          transparent 100%
+        ),
+        linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 1)
+        );
+      background-size: 100% 100%;
+      &:hover {
+        background-size: 200% 200%;
+      }
+    }
+
     &-text {
       position: relative;
       z-index: 10;
       font-size: 2.3rem;
       letter-spacing: 1.5px;
       font-weight: bold;
+
       i {
         margin-left: 1.5rem;
       }
@@ -60,6 +151,13 @@
         display: block;
         font-weight: 300;
         font-size: 1.8rem;
+        @include respond(tab-port) {
+          font-size: 2.2rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        font-size: 2.2rem;
       }
     }
     &-img {
@@ -79,11 +177,21 @@
   &__card-photo {
     transform: translateY(-20rem);
     position: relative;
-    filter:drop-shadow(rgba(0, 68, 59, 0.12) 0px 8px 16px);
+    filter: drop-shadow(rgba(0, 68, 59, 0.12) 0px 8px 16px);
+    img {
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
 
+    .cta__decoration{
+      @include respond(tab-port) {
+        width: 30%;
+      }
+    }
   }
 
-  &__decoration{
+  &__decoration {
     position: absolute;
     bottom: -10rem;
     right: -10rem;
@@ -98,7 +206,7 @@
     left: 0;
     width: 104%;
     height: 97%;
-    border: 5px solid #00FFBD;
+    border: 5px solid #00ffbd;
     border-radius: 50% 50% 0% 0%/41% 42% 0% 0%;
     transform: translate(4rem, -1rem);
   }

@@ -7,13 +7,19 @@
     margin-top: 10rem;
     padding-top: 3rem;
     padding-bottom: 30rem;
+
   }
   width: 100%;
+
   &__left-block {
     height: 100%;
     min-width: 10%;
     background: transparent;
+    @include respond(desktop) {
+      min-width: 0%;
+    }
   }
+
   &__left {
     position: absolute;
     left: 0rem;
@@ -21,6 +27,9 @@
     width: 10%;
     background: $color-primary;
     clip-path: polygon(0 20%, 100% 0%, 100% 63%, 0% 85%);
+    @include respond(desktop) {
+      display: none;
+    }
   }
   &__right {
     width: 100%;
@@ -28,11 +37,36 @@
     background: $color-primary-light;
     display: flex;
     flex: 1;
+    @include respond(desktop) {
+      flex-direction: column;
+    }
+    @include respond(tab-port) {
+      padding: 8rem 5rem;
+    }
+    @include respond(phone) {
+      padding: 4rem 2rem;
+    }
   }
+
+  &__decoration {
+    @include respond(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+    img {
+      @include respond(desktop) {
+        height: 10rem;
+      }
+    }
+  }
+
   &__text {
     font-size: 4rem;
     span {
       display: block;
+    }
+    @include respond(desktop) {
+      font-size: 3rem;
     }
   }
 
@@ -40,11 +74,22 @@
     margin-left: 5rem;
     display: flex;
     align-items: center;
+    a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
     ul {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-row: repeat(3, 1fr);
       grid-gap: 2rem;
+      @include respond(tab-port) {
+        margin-top: 3rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
       li {
         background: $color-white;
         border-radius: 1rem;
@@ -53,13 +98,19 @@
         padding: 1rem;
         display: flex;
         align-items: center;
-        justify-content: space-around;
         font-size: $default-font-size;
         cursor: pointer;
       }
       li:hover {
         background: $color-primary-light;
       }
+    }
+
+    @include respond(desktop) {
+      margin-left: 0rem;
+    }
+    @include respond(tab-port) {
+      width: 100%;
     }
   }
 

@@ -13,7 +13,7 @@
     top: 0.8rem;
     left: 0.6rem;
   }
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   &__input {
     border-radius: 1rem;
     padding: 1rem 0;
@@ -21,6 +21,11 @@
     margin-right: -4rem;
     padding-left: 3.5rem;
     border: 1px solid $color-grey-light-1;
+    outline: none;
+    &:focus{
+      border: none;
+      
+    }
   }
   &__button {
     background-color: transparent;

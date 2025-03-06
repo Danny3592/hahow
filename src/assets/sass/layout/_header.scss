@@ -1,5 +1,5 @@
 .header {
-  padding-top: 50px; 
+  padding-top: 50px;
   overflow-x: hidden;
   .swiper-container {
     position: relative;
@@ -25,8 +25,30 @@
       justify-content: center;
       align-items: center; /* 確保圖片置中 */
       z-index: 3;
+      overflow: hidden;
+
+      @include respond(desktop) {
+        height: 50vh;
+      }
+      // @include respond(tab-land) {
+      //   height: 40vh;
+      // }
+      @include respond(tab-port) {
+        height: 40vh;
+      }
+      @include respond(phone) {
+        height: 35vh;
+      }
+      @include respond(488px) {
+        height: 20vh;
+      }
+      @include respond(328px) {
+        height: 15vh;
+      }
     }
     &__img {
+      object-fit: cover;
+      object-position: center;
       border-radius: 1rem;
       width: 100%;
     }

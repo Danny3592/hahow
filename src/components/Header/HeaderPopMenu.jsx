@@ -14,7 +14,6 @@ const RecursiveMenu = ({ categories, currentLayer, setLayerCount }) => {
     if (currentLayer === 1 ) {
       setActiveCategory(categories[0].name);
     }
-    console.log('activeCategory = ',activeCategory);
     
   }, [currentLayer]);
 
@@ -44,8 +43,6 @@ const RecursiveMenu = ({ categories, currentLayer, setLayerCount }) => {
             }}
             onMouseLeave={(e) => {
               setActiveCategory(null);
-              console.log('e.relatedTarget = ', e.relatedTarget);
-              console.log('e.currentTarget = ', e.currentTarget);
               if (!e.currentTarget.contains(e.relatedTarget)) {
                 if (!category.subCategories) setLayerCount(currentLayer - 1);
               }

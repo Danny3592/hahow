@@ -1,15 +1,26 @@
 .article {
   margin-top: -0rem;
-
+  max-width: 114rem;
+  margin: 0rem auto;
+  margin-top: -25rem;
+  @include respond(tab-land) {
+    width: 80%;
+    margin-top: -5rem;
+  }
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 4rem;
     grid-row-gap: 2rem;
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+
+      margin: 0 auto;
+    }
   }
   &__card {
-  
     width: 100%;
     border-bottom: 1px solid $color-grey-dark-2;
 
@@ -23,10 +34,9 @@
 
     &--top {
       cursor: pointer;
-      width: 100%;
+
       display: flex;
-      gap: 3rem;
-      
+      gap: 2rem;
     }
 
     &--bottom {
@@ -38,7 +48,7 @@
   }
 
   &__info {
-    
+    flex: 0 0 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,7 +60,6 @@
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
-    
   }
   &__author {
     display: flex;
@@ -81,13 +90,14 @@
 
   &__img-box {
     width: 100%;
-    align-self: end;
+    align-self: center;
     overflow: hidden;
+    transform: translateY(1rem);
   }
 
   &__img {
     width: 100%;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &__caregory {
@@ -102,11 +112,16 @@
   }
 
   &__tag {
+    cursor: pointer;
     display: inline-block;
     padding: 1rem 1.5rem;
     background-color: $color-grey-light-1;
     border-radius: 2rem;
     font-size: $default-font-size;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   &__bookmark {

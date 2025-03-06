@@ -9,8 +9,14 @@ const Learning = () => {
           <div className="learning__img-box--main">
             <img src={mainImg} alt="" className="learning__img--main" />
           </div>
+
+          <div className="learning__chat-box-phone">
+            <p className="learning__text">Hi Danny xiao，又看到你真好</p>
+            <div className="learning__text">繼續上次的進度吧～</div>
+          </div>
+
           <div className="learning__chat-box">
-            <ChatFrame color='white'>
+            <ChatFrame color="white">
               <p className="learning__text">Hi Danny xiao，又看到你真好</p>
               <div className="learning__text">繼續上次的進度吧～</div>
             </ChatFrame>
@@ -33,7 +39,7 @@ const Learning = () => {
                   alt=""
                 />
               </div>
-              <div className="u-flex u-flex-col ">
+              <div className="learning__info-box">
                 <div className="learning__title">
                   動畫互動網頁程式入門 (HTML/CSS/JS)
                 </div>
@@ -58,7 +64,7 @@ const Learning = () => {
                   alt=""
                 />
               </div>
-              <div className="learning__info">
+              <div className="learning__info-box">
                 <div className="learning__title">
                   動畫互動網頁特效入門（JS/CANVAS）
                 </div>

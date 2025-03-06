@@ -1,12 +1,31 @@
 .learning {
   background-color: #eee;
-  height: 23rem;
+  height: 25rem;
   font-size: 3rem;
   overflow-y: hidden;
+  padding-top: 3rem;
+  overflow-x: hidden;
+
+
+  @include respond(tab-land) {
+    flex-direction: column;
+   height: 48rem;
+  }
+  @include respond(tab-port) {
+   height: 50rem;
+  }
+  @include respond(phone) {
+    height: 40rem;
+   }
+
   &-box {
     display: flex;
-    width: 114rem;
+    max-width: 114rem;
     margin: 0 auto;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
   }
   &__img--main {
     width: 15rem;
@@ -15,12 +34,24 @@
   &__chat {
     display: flex;
     position: relative;
+    @include respond(tab-land) {
+     align-items: center;
+     gap: 3rem;
+     padding-left: 5rem;
+    }
   }
   &__img-box--main {
     transform: translateY(8.5rem);
+    @include respond(tab-land) {
+      height: 14rem;
+      transform: translateY(0rem);
+    }
   }
   &__chat-box {
     position: relative;
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__text {
@@ -43,12 +74,26 @@
     i {
       margin-left: 5px;
     }
+
+    @include respond(tab-land) {
+      bottom: 8.5rem;
+      left: auto; 
+      right: 10rem;
+    }
+    @include respond(phone) {
+     margin-top: 2rem;
+     right: 2rem;
+    }
   }
 
   &__cards {
     display: flex;
     gap: 3rem;
     flex: 1;
+    @include respond(tab-land) {
+     align-items: center;
+     justify-content: center;
+    }
   }
 
   &__card {
@@ -65,11 +110,27 @@
         transform: scale(1.2);
       }
     }
+    @include respond(tab-land) {
+      width: 45%;
+    }
   }
+
+  &__chat-box-phone{
+    display: none;
+    @include respond(tab-land) {
+      display: block;
+    }
+  }
+  
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  &__info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   &__img-box {
     display: flex;

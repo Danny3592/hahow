@@ -22,14 +22,18 @@
     padding-bottom: 5rem;
 
     &--1 {
-      background-color: #f5f7f9;
-      padding-left: 3rem;
+      padding: 0;
+      background-color: #F5F7F9;
+      
+
       left: 3rem;
       box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
       li:hover {
         color: $color-primary;
+        background-color: $color-white;
       }
       li {
+        cursor: pointer;
         word-wrap: break-word;
         padding-bottom: 2rem;
         list-style: none;
@@ -60,7 +64,7 @@
       border-radius: 0 1rem 1rem 0;
     }
     &--3 {
-      box-shadow: 0 .5rem .5rem rgba($color-black, 0.1);
+      box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
       border-left: 1px solid black;
       border-radius: 0 1rem 1rem 0;
       left: 20rem;

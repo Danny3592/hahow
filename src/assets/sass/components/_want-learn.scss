@@ -24,6 +24,12 @@
     display: flex;
     gap: 5rem;
     justify-content: space-between;
+    align-items: start;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      padding: 0rem 3rem;
+    }
   }
 
   &__card {
@@ -32,6 +38,11 @@
       img {
         transform: scale(1.2);
       }
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+      gap: 2rem;
     }
   }
 
@@ -52,7 +63,22 @@
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
+    @include respond(tab-port) {
+      flex: 0 0 30%;
+    }
+    @include respond(460px) {
+      flex: 0 1 20%;
+    }
+
   }
+
+  &__info-box {
+    @include respond(tab-port) {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+
   &__img {
     transition: all 0.5s;
     width: 100%;

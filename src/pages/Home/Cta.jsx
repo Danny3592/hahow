@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionTitle from '../../components/SectionTitle';
 import { ctaBg } from '../../../util/home-img';
+import CtaCard from '../../components/Card/CtaCard';
 
 const Cta = () => {
   return (
@@ -14,42 +15,28 @@ const Cta = () => {
             />
           </div>
           <div className="cta__cards">
-            <div className="cta__card cta__card--1">
-              <img src={ctaBg} alt="" className="cta__card-bg" />
-              <div className="cta__card-text">
-                下載手機版<i class="fa-solid fa-caret-right"></i>
-                <span>隨時隨地學習不間斷</span>
-              </div>
-              <img
-                src="https://hahow.in/static/media/img-mobile@2x.90177e4ee714ee043492.png"
-                alt=""
-                className="cta__card-img"
-              />
-            </div>
-            <div className="cta__card cta__card--1">
-              <img src={ctaBg} alt="" className="cta__card-bg" />
-              <div className="cta__card-text">
-                下載手機版<i class="fa-solid fa-caret-right"></i>
-                <span>隨時隨地學習不間斷</span>
-              </div>
-              <img
-                src="https://hahow.in/static/media/img-mobile@2x.90177e4ee714ee043492.png"
-                alt=""
-                className="cta__card-img"
-              />
-            </div>
-            <div className="cta__card cta__card--1">
-              <img src={ctaBg} alt="" className="cta__card-bg" />
-              <div className="cta__card-text">
-                下載手機版<i class="fa-solid fa-caret-right"></i>
-                <span>隨時隨地學習不間斷</span>
-              </div>
-              <img
-                src="https://hahow.in/static/media/img-mobile@2x.90177e4ee714ee043492.png"
-                alt=""
-                className="cta__card-img"
-              />
-            </div>
+            <CtaCard
+              classProps="cta"
+              img="https://hahow.in/static/media/img-mobile@2x.90177e4ee714ee043492.png"
+              title="下載手機版"
+              text="隨時隨地學習不間斷"
+              index={1}
+            />
+
+            <CtaCard
+              classProps="cta"
+              img="https://hahow.in/static/media/img-giftcard.c64192d5a52205800eb9.png"
+              title="贈送禮物卡"
+              text="把學習的快樂與更多人分享"
+              index={2}
+            />
+            <CtaCard
+              classProps="cta"
+              img="	https://hahow.in/static/media/img-h4b.5762fd25e7e945b0b28d.png"
+              title="Hahow for Business"
+              text="企業版超過 700+ 堂無限學"
+              index={3}
+            />
           </div>
         </div>
         <div className="cta__right">
@@ -62,7 +49,7 @@ const Cta = () => {
             <img
               src="https://hahow.in/static/media/img-deco-right.5eec1fdf8864095871355b9a740aae0d.svg"
               alt=""
-              className='cta__decoration'
+              className="cta__decoration"
             />
           </div>
         </div>
