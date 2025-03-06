@@ -8,6 +8,18 @@
     color: #ddd;
   }
 
+  &__close{
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+
+
+  &__smart-search{
+    display: block;
+    @include respond(phone){
+      display: none;
+    }
+  }
   &__phone-icon {
     font-size: 2rem;
     color: #ddd;
@@ -23,6 +35,7 @@
   }
   flex: 0 0 40%;
   &__input {
+    align-items: center;
     border-radius: 1rem;
     padding: 1rem 0;
     width: 90%;

@@ -8,18 +8,17 @@ import { exploreData2 } from '../../util/header-data';
 
 const MainNav = () => {
   const [showBar, setShowBar] = useState(false);
+  const [showSearchBar, setShowSearchBar] = useState(false);
 
-  const [showSearch, setShowSearch] = useState(
+  const [isDesktop, setIsDesktop] = useState(
     window.innerWidth > 982 ? true : false,
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setShowSearch(window.innerWidth > 982 ? true : false);
+      setIsDesktop(window.innerWidth > 982 ? true : false);
     };
-
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -50,23 +49,23 @@ const MainNav = () => {
         <ul className="nav-phone__list nav-phone__list--1">
           <li className="nav-phone__item">
             <span>生活品味</span>
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
           </li>
           <li className="nav-phone__item">
             <span>職場技能</span>
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
           </li>
           <li className="nav-phone__item">
             <span>設計</span>
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
           </li>
           <li className="nav-phone__item">
             <span>語言</span>
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
           </li>
           <li className="nav-phone__item">
             <span>其他領域</span>
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
           </li>
         </ul>
         <div className="nav-phone__title">
@@ -88,7 +87,7 @@ const MainNav = () => {
         </ul>
 
         <div className="nav-phone__business-plan">
-          <i class="fa-solid fa-suitcase"></i>企業方案
+          <i className="fa-solid fa-suitcase"></i>企業方案
         </div>
 
         <div className="nav-phone__advert">
@@ -112,18 +111,17 @@ const MainNav = () => {
           <div className="category">
             <button className="category__button">
               探索
-              <i class="fa-solid fa-caret-down category__icon "></i>
+              <i className="fa-solid fa-caret-down category__icon "></i>
             </button>
             <div className="category__pop">
               <HeaderListPop data={exploreData2} />
             </div>
-
           </div>
 
-          {showSearch ? (
-            <div className="search" style={{zIndex:showSearch?'999':'0'}}>
+          {!isDesktop && showSearchBar && (
+            <div className="search" style={{ zIndex: isDesktop ? '999' : '0' }}>
               <div className="search__icon-box">
-                <i class="fa-solid fa-magnifying-glass search__icon"></i>
+                <i className="fa-solid fa-magnifying-glass search__icon"></i>
               </div>
               <input
                 type="text"
@@ -132,15 +130,25 @@ const MainNav = () => {
               />
               <button className="search__button">
                 <i
-                  class="fa-brands fa-searchengin"
+                  className="fa-brands fa-searchengin search__smart-search"
                   title="使用Hahow智慧搜尋"
                 ></i>
               </button>
+              <i
+              className="fa-solid fa-xmark search__close"
+              onClick={() => setShowSearchBar(false)}
+            ></i>
             </div>
-          ) : (
-            <i class="fa-solid fa-magnifying-glass search__phone-icon" onClick={()=>{
-              setShowSearch(true)
-            }}></i>
+          )}
+        
+
+          {!isDesktop && !showSearchBar && (
+            <i
+              className="fa-solid fa-magnifying-glass search__phone-icon"
+              onClick={() => {
+                setShowSearchBar(true);
+              }}
+            ></i>
           )}
 
           <div className="discount">
@@ -213,7 +221,7 @@ const MainNav = () => {
             <div className="user-nav__icon-box">
               <div className="user-nav__cart">
                 <span className="user-nav__notification-i">1</span>
-                <i class="fa-solid fa-cart-shopping user-nav__icon"></i>
+                <i className="fa-solid fa-cart-shopping user-nav__icon"></i>
                 <HeaderPop
                   rootPositon={-4}
                   blockPosition={-30}
@@ -247,7 +255,7 @@ const MainNav = () => {
             <div className="user-nav__icon-box ">
               <div className="user-nav__notification">
                 <span className="user-nav__notification-i">1</span>
-                <i class="fa-regular fa-bell user-nav__icon"></i>
+                <i className="fa-regular fa-bell user-nav__icon"></i>
 
                 <HeaderPop
                   rootPositon={-4}
@@ -255,7 +263,7 @@ const MainNav = () => {
                   backgroundColor="#EFF2F6"
                 >
                   <div className="notification-pop__header">
-                    全部標記為已讀<i class="fa-solid fa-circle-check"></i>
+                    全部標記為已讀<i className="fa-solid fa-circle-check"></i>
                   </div>
                   <div className="notification-pop__card">
                     <div className="notification-pop__img-box">
@@ -318,7 +326,7 @@ const MainNav = () => {
                 alt=""
                 className="user-nav__photo"
               />
-              <i class="fa-solid fa-caret-down user-nav__arr"></i>
+              <i className="fa-solid fa-caret-down user-nav__arr"></i>
               <HeaderPop
                 rootPositon={-4}
                 blockPosition={-30}
@@ -336,7 +344,7 @@ const MainNav = () => {
                       </div>
                     </div>
                     <div className="photo-pop__arrow">
-                      <i class="fa-solid fa-angle-right"></i>
+                      <i className="fa-solid fa-angle-right"></i>
                     </div>
                   </div>
 
@@ -344,7 +352,7 @@ const MainNav = () => {
                     <div className="photo-pop__levelup">
                       <p>會員等級提升啦</p>
                       <p>
-                        查看詳情 <i class="fa-solid fa-angle-right"></i>
+                        查看詳情 <i className="fa-solid fa-angle-right"></i>
                       </p>
                     </div>
                     <div className="photo-pop__levelup-img">

@@ -76,6 +76,9 @@
     cursor: pointer;
     font-size: $default-font-size;
     margin-bottom: 2rem;
+    @include respond(tab-land) {
+      font-size: 2.6rem;
+    }
   }
   &__text {
     cursor: pointer;
