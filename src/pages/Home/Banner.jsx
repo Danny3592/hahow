@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -6,6 +6,33 @@ import 'swiper/css/navigation';
 
 const Banner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const [slidesPerView, setSlidesPerView] = useState(
+    window.innerWidth < 900 ? 1 : 1.5
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesPerView(window.innerWidth < 900 ? 1 : 1.5);
+    };
+
+    window.addEventListener('resize',()=>{
+      
+      handleResize()
+    } );
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+
+
+
+
+
+
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -17,7 +44,9 @@ const Banner = () => {
           modules={[Navigation]}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
           spaceBetween={20}
-          slidesPerView={1.5}
+          slidesPerView={slidesPerView}
+
+
           loop={true}
           centeredSlides={true}
           pagination={{ clickable: true }}
@@ -30,8 +59,6 @@ const Banner = () => {
             });
           }}
           onSlideChange={(swiper) => {
-            console.log(swiper.realIndex);
-
             setActiveIndex(swiper.realIndex);
           }}
           className="custom-swiper"
@@ -43,7 +70,7 @@ const Banner = () => {
               } custom-swiper__img-box`}
             >
               <img
-                src="https://images.hahow.in/images/67ac43d128ce26aec20f3f47?width=1400"
+                src="https://images.hahow.in/images/67c0751d2f273b08a7b53cdc?width=1400"
                 alt="course"
                 className="custom-swiper__img"
               />
@@ -61,7 +88,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="custom-swiper__img-box">
               <img
-                src="https://images.hahow.in/images/67ac43d128ce26aec20f3f47?width=1400"
+                src="https://images.hahow.in/images/67c074ffc023bd2c13b0a63e?width=1400"
                 alt="course"
                 className="custom-swiper__img"
               />
@@ -79,7 +106,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="custom-swiper__img-box">
               <img
-                src="https://images.hahow.in/images/67ac43d128ce26aec20f3f47?width=1400"
+                src="https://images.hahow.in/images/67c6b6c41dddb9ff6f5eaab6?width=1400"
                 alt="course"
                 className="custom-swiper__img"
               />

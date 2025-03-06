@@ -1,9 +1,12 @@
 @import './abstracts/variables';
 
+@import './abstracts/mixin';
+
 @import './pages/home';
 
 @import './layout/nav';
 @import './layout/header';
+@import './layout/footer';
 
 @import './base/base';
 @import './base/utilities';
@@ -26,3 +29,12 @@
 @import './components/creators';
 @import './components/cooperators';
 @import './components/cta';
+@import './components/pick-class-pop';
+@import './components/class-green-tag';
+@import './components/star-evaluate';
+@import './components/header-pop';
+@import './components/header-list-pop';
+@import './components/header--menu-pop';
+
+@import './components/card/want-learning-card';
+

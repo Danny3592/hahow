@@ -1,23 +1,104 @@
 .new-class {
+  .swiper-container {
+    position: relative;
+    width: 100%;
+  }
+  .custom-swiper {
+    &__custom--prev,
+    &__custom--next {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      cursor: pointer;
+      color: $color-primary;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-white;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      transition: all 0.2s;
+      box-shadow: 0 .5rem 3rem rgba($color-black, 0.3);
+    }
+    &__custom--prev:hover,
+    &__custom--next:hover {
+      color: $color-primary;
+    }
+    &__custom--prev {
+      left: -5%;
+    }
+    &__custom--next {
+      right: -5%;
+    }
+  }
+
   &-box {
-    width: 114rem;
+    max-width: 114rem;
+    width: 100%;
     margin: 0 auto;
+
+    @include respond(desktop){
+      max-width: 80%;
+    }
   }
   &__cards {
     display: flex;
     gap: 5rem;
     justify-content: space-between;
+    align-items: start;
+  }
+  &__card {
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__promote {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    display: inline-block;
+    background: #fa8c16;
+    color: $color-white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0 0 0.4rem 0;
+  }
+  &__card:hover {
+    .new-class__bookmark {
+      bottom: 2rem;
+    }
   }
 
+  //////////
+  &__bookmark {
+    position: absolute;
+    font-size: 2.5rem;
+    right: 2rem;
+    z-index: 20;
+    bottom: -3rem;
+    transition: all 0.5s;
+  }
   &__img-box {
+    position: relative;
+    overflow: hidden;
     border-radius: 1rem;
   }
   &__img {
+    transition: all 0.5s;
     width: 100%;
     border-radius: 1rem;
   }
+  ///////////
 
   &__title {
+    margin-top: 1rem;
     font-size: 1.8rem;
   }
   &__tag {
@@ -82,5 +163,4 @@
     justify-content: space-between;
     margin-bottom: 2rem;
   }
-  
 }

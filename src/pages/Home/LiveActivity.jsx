@@ -1,10 +1,8 @@
 import React from 'react';
 import SectionTitle from '../../components/SectionTitle';
-import { exampleImg } from './../../../util/home-img';
-
 const LiveActivity = () => {
   return (
-    <div className="live u-box">
+    <div className="live ">
       <SectionTitle
         hasMore={true}
         mainTitle="直播活動"
@@ -12,13 +10,13 @@ const LiveActivity = () => {
       />
       <div className="live__card">
         <div className="live__img-box">
-          <img src={exampleImg} alt="" className="live__img" />
+          <img src='https://images.hahow.in/images/670f917f742c976f36dad13e?width=600' alt="" className="live__img" />
         </div>
         <div className="live__content">
           <div>
             <div className="live__title">
               <span className="live__tag">直播</span>
-              英文多聽就會懂？免費直播，破解英文聽力學習迷思！
+              家庭事業我都要，伴侶怎樣溝通更有效 ?
             </div>
             <div className="live__status">
               <span className="live__replay">可重播</span>

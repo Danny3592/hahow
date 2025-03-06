@@ -4,23 +4,35 @@
     display: flex;
     max-width: 100%;
     margin-top: 10rem;
-
     padding-top: 3rem;
     padding-bottom: 30rem;
+    @include respond(tab-land) {
+      padding-bottom: 5rem;
+    }
   }
   width: 100%;
+
   &__right-block {
     height: 100%;
-    min-width: 20%;
+    min-width: 10%;
     background: transparent;
+    @include respond(desktop) {
+      min-width: 0%;
+    }
   }
+
   &__right {
     position: absolute;
     right: 0rem;
     height: 100%;
-    width: 20%;
+    width: 10%;
     background: $color-primary;
-    clip-path: polygon(0 0%, 100% 20%, 100% 85%, 0% 70%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 71.5%, 0% 80%);
+    transform: scaleX(-1);
+    @include respond(desktop) {
+      display: none;
+      width: 0;
+    }
   }
   &__left {
     background: #002533;
@@ -28,25 +40,41 @@
     max-width: 100%;
     display: flex;
     flex: 1;
+    align-items: center;
   }
 
   &__list {
-    margin-top: 8rem;
+    margin-top: 4rem;
     display: grid;
+    list-style: none;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 2rem 8rem;
     grid-auto-flow: column;
     padding-bottom: 3rem;
+    align-items: center;
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+    }
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(6rem);
     width: 80%;
     margin: 0 auto;
+    @include respond(desktop) {
+      width: 100%;
+      transform: translateX(0rem);
+      padding: 0 3rem;
+    }
   }
 
   &__content-box {
-    width: 100%;
     display: flex;
   }
 
@@ -54,7 +82,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: auto 0;
+    margin: 0;
   }
 
   &__card {
@@ -68,29 +96,55 @@
     position: absolute;
     top: -3.5rem;
     left: -5.5rem;
+    width: 10rem;
+    z-index: 10;
   }
 
   &__img-box {
+    overflow: hidden;
     width: 80%;
     border-radius: 2rem;
+    flex: 0 0 50%;
   }
   &__img {
     width: 100%;
     border-radius: 2rem;
+    transition: all 0.5s;
   }
 
   &__title {
-    font-size: $default-font-size;
+    font-size: 2rem;
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
   &__author {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
   }
   &__people {
-    font-size: 1.2rem;
+    font-size: $default-font-size;
+    i{
+      margin-right: 1rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
   }
 
   &__item {
+    cursor: pointer;
     width: 100%;
+    &:hover {
+      .popular__img {
+        transform: scale(1.2);
+      }
+    }
   }
 
   &__item-box {
@@ -98,7 +152,7 @@
     gap: 2rem;
   }
   &__price {
-    font-size: $default-font-size;
+    font-size: 1.8rem;
   }
   &__origin-price {
     font-size: 1.2rem;
@@ -107,7 +161,7 @@
 
   &__price-box {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 1rem;
   }
 
@@ -118,7 +172,7 @@
     position: relative;
     padding: 5rem 0rem;
     cursor: pointer;
- 
+
     &::after {
       transform: translateY(6rem);
       content: '';

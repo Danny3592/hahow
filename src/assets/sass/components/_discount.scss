@@ -2,6 +2,9 @@
 .discount {
   width: 10rem;
   cursor: pointer;
+  @include respond(tab-land) {
+    display: none;
+  }
   &__img {
     width: 100%;
   }
