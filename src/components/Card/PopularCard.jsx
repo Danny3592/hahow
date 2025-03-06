@@ -19,7 +19,7 @@ const PopularCard = ({
           <img src={img} alt="" className={`${classProps}__img`} />
         </div>
         <div className={`${classProps}__info`}>
-          <div className={`${classProps}__title`}>{title}</div>
+          <h2 className={`${classProps}__title`}>{title}</h2>
           <div className={`${classProps}__author`}>by {author}</div>
           <div className={`${classProps}__people`}>
             <i class="fa-solid fa-person"></i>

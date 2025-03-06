@@ -14,10 +14,10 @@ const LiveActivity = () => {
         </div>
         <div className="live__content">
           <div>
-            <div className="live__title">
+            <h2 className="live__title">
               <span className="live__tag">直播</span>
               家庭事業我都要，伴侶怎樣溝通更有效 ?
-            </div>
+            </h2>
             <div className="live__status">
               <span className="live__replay">可重播</span>
               <span className="live__date">02-19(六)</span>

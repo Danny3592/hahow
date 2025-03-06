@@ -2,8 +2,6 @@
 
 @import './abstracts/mixin';
 
-@import './pages/home';
-
 @import './layout/nav';
 @import './layout/header';
 @import './layout/footer';
@@ -36,5 +34,4 @@
 @import './components/header-list-pop';
 @import './components/header--menu-pop';
 
-@import './components/card/want-learning-card';
-
+@import './components/want-learning-card';

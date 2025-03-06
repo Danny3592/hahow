@@ -27,10 +27,10 @@ const NewClassCard = ({
           className={`${classProps}__img`}
         />
       </div>
-      <div className={`${classProps}__title`}>
+      <h2 className={`${classProps}__title`}>
         <ClassTag type="class" />
         {title}
-      </div>
+      </h2>
       <div className={`${classProps}__author`}>by {author}</div>
       <div className={`${classProps}__status`}>
         <div className={`${classProps}__day`}>倒數募資{day}天</div>

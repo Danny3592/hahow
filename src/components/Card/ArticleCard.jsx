@@ -24,7 +24,7 @@ const ArticleCard = ({
               <div className={`${classProps}__date`}>{date}</div>
               <div className={`${classProps}__views`}>{views}</div>
             </div>
-            <div className={`${classProps}__title`}>{title}</div>
+            <h2 className={`${classProps}__title`}>{title}</h2>
             <div className={`${classProps}__text`}>{text}</div>
           </div>
           <div className={`${classProps}__img-box`}>

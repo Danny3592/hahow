@@ -15,7 +15,7 @@ const CreatorsCard = ({ classProps, creator, text, coruseName, index }) => {
           className={`${classProps}__decoration ${classProps}__decoration--2`}
         />
         <div className={`${classProps}__info`}>
-          <div className={`${classProps}__creator`}>{creator}</div>
+          <h2 className={`${classProps}__creator`}>{creator}</h2>
           <div className={`${classProps}__text`}>{text}</div>
           <div className={`${classProps}__class-box`}>
             <div className={`${classProps}__class`}>

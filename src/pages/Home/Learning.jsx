@@ -40,9 +40,9 @@ const Learning = () => {
                 />
               </div>
               <div className="learning__info-box">
-                <div className="learning__title">
+                <h4 className="learning__title">
                   動畫互動網頁程式入門 (HTML/CSS/JS)
-                </div>
+                </h4>
                 <div className="learning__stage">
                   <div className="learning__progress learning__progress--1"></div>
                   <span className="learning__percentage">79%</span>
@@ -65,9 +65,9 @@ const Learning = () => {
                 />
               </div>
               <div className="learning__info-box">
-                <div className="learning__title">
+                <h4 className="learning__title">
                   動畫互動網頁特效入門（JS/CANVAS）
-                </div>
+                </h4>
                 <div className="learning__stage">
                   <div className="learning__progress learning__progress--2"></div>
                   <span className="learning__percentage">39%</span>

@@ -5,9 +5,17 @@
   margin-right: -5rem;
   &__icon {
     font-size: 2rem;
-
     color: #ddd;
   }
+
+  &__phone-icon {
+    font-size: 2rem;
+    color: #ddd;
+    margin-right: auto;
+    margin-left: 3rem;
+  }
+  
+
   &__icon-box {
     position: absolute;
     top: 0.8rem;
@@ -22,9 +30,8 @@
     padding-left: 3.5rem;
     border: 1px solid $color-grey-light-1;
     outline: none;
-    &:focus{
+    &:focus {
       border: none;
-      
     }
   }
   &__button {

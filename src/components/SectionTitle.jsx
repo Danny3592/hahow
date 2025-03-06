@@ -2,8 +2,8 @@ const SectionTitle = ({ mainTitle, subTitle, hasMore }) => {
   return (
     <div className="section-header">
       <div className="title">
-        <span className="title--main">{mainTitle}</span>
-        <span className="title--sub">{subTitle}</span>
+        <h1 className="title--main">{mainTitle}</h1>
+        <p className="title--sub">{subTitle}</p>
       </div>
       {hasMore && (
         <div className="more">

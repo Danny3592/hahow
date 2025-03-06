@@ -31,14 +31,14 @@ const WantLearnCard = ({
             <img src={src} alt="" className={`${classProps}__img`} />
           </div>
           <div className={`${classProps}__info-box`}>
-            <div className={`${classProps}__title`}>
+            <h2 className={`${classProps}__title`}>
               {tagInTitle && (
                 <div className={`${classProps}__tag`}>
                   <ClassTag type="class" />
                 </div>
               )}
               {title}
-            </div>
+            </h2>
             <ClassAuthor author={author} />
             <div className={`${classProps}__status`}>
               <div>

@@ -121,7 +121,7 @@ const MainNav = () => {
           </div>
 
           {showSearch ? (
-            <div className="search">
+            <div className="search" style={{zIndex:showSearch?'999':'0'}}>
               <div className="search__icon-box">
                 <i class="fa-solid fa-magnifying-glass search__icon"></i>
               </div>
@@ -130,7 +130,6 @@ const MainNav = () => {
                 className="search__input"
                 placeholder="搜尋影音課程、文章、直播、組合..."
               />
-
               <button className="search__button">
                 <i
                   class="fa-brands fa-searchengin"
@@ -139,7 +138,9 @@ const MainNav = () => {
               </button>
             </div>
           ) : (
-            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+            <i class="fa-solid fa-magnifying-glass search__phone-icon" onClick={()=>{
+              setShowSearch(true)
+            }}></i>
           )}
 
           <div className="discount">

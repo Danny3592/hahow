@@ -54,7 +54,7 @@ const PickClassCard = ({
 
       <div className={`${classProps}__card--bottom`}>
         <div>
-          <div className={`${classProps}__title`}>{title}</div>
+          <h2 className={`${classProps}__title`}>{title}</h2>
           <div className={`${classProps}__content`}>
             <img src={pickClassImg} alt="" className={`${classProps}__icon`} />
 

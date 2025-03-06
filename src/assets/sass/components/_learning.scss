@@ -6,17 +6,22 @@
   padding-top: 3rem;
   overflow-x: hidden;
 
-
   @include respond(tab-land) {
     flex-direction: column;
-   height: 48rem;
+    height: 48rem;
   }
   @include respond(tab-port) {
-   height: 50rem;
+    height: 50rem;
   }
   @include respond(phone) {
     height: 40rem;
-   }
+  }
+
+ 
+h4 {
+  margin: 0 !important;
+}
+
 
   &-box {
     display: flex;
@@ -35,9 +40,9 @@
     display: flex;
     position: relative;
     @include respond(tab-land) {
-     align-items: center;
-     gap: 3rem;
-     padding-left: 5rem;
+      align-items: center;
+      gap: 3rem;
+      padding-left: 5rem;
     }
   }
   &__img-box--main {
@@ -77,12 +82,12 @@
 
     @include respond(tab-land) {
       bottom: 8.5rem;
-      left: auto; 
+      left: auto;
       right: 10rem;
     }
     @include respond(phone) {
-     margin-top: 2rem;
-     right: 2rem;
+      margin-top: 2rem;
+      right: 2rem;
     }
   }
 
@@ -91,8 +96,8 @@
     gap: 3rem;
     flex: 1;
     @include respond(tab-land) {
-     align-items: center;
-     justify-content: center;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -115,13 +120,13 @@
     }
   }
 
-  &__chat-box-phone{
+  &__chat-box-phone {
     display: none;
     @include respond(tab-land) {
       display: block;
     }
   }
-  
+
   &__info {
     display: flex;
     flex-direction: column;
