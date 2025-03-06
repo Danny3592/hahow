@@ -1,0 +1,179 @@
+.creators {
+  height: 50rem;
+  margin-bottom: 10rem;
+  width: 114rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(tab-port) {
+    height: 35rem;
+  }
+
+  .swiper-container {
+    position: relative;
+    width: 100%;
+  }
+  .custom-swiper {
+    &__custom--prev,
+    &__custom--next {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      cursor: pointer;
+      color: $color-primary;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-white;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      transition: all 0.2s;
+      box-shadow: 0 0.5rem 3rem rgba($color-black, 0.3);
+    }
+    &__custom--prev:hover,
+    &__custom--next:hover {
+      color: $color-primary;
+    }
+    &__custom--prev {
+      left: -5%;
+    }
+    &__custom--next {
+      right: -5%;
+    }
+  }
+  height: 50rem;
+  margin-bottom: 10rem;
+  &__cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 3rem;
+  }
+  &__decoration {
+    &--1 {
+      top: 0;
+      left: 0;
+    }
+    &--2 {
+      bottom: 15%;
+      right: 0;
+    }
+    position: absolute;
+  }
+  &__card {
+    // width: 100%;
+    // height: 100%;
+    height: 40rem;
+    width: 25rem;
+    cursor: pointer;
+
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    &--1 {
+      background-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(rgb(60, 60, 60), 0.6)
+        ),
+        url('https://images.hahow.in/images/64c75e392d690c186f3c271a');
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(rgb(60, 60, 60), 0.6)
+        ),
+        url('https://images.hahow.in/images/64c75dee3b3078abd6f59830');
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(rgb(60, 60, 60), 0.6)
+        ),
+        url('https://images.hahow.in/images/64c75dd4c9d1040e7f959589');
+    }
+    &--4 {
+      background-image: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(rgb(60, 60, 60), 0.6)
+        ),
+        url('https://images.hahow.in/images/64c75e6964d140e92fc8fee3');
+    }
+  }
+
+  &__info {
+    width: 100%;
+    color: $color-white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__creator {
+    font-size: $default-font-size;
+    width: 80%;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    font-weight: 400;
+    width: 80%;
+    cursor: pointer;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+  &__class-box {
+    background: $color-grey-light-1;
+    display: flex;
+    justify-content: center;
+  }
+  &__class {
+    width: 100%;
+    padding: 2rem 0rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: $color-grey-dark-2;
+    &-name {
+      color: $color-grey-dark-1;
+      line-height: 1.8;
+      width: 60%;
+      cursor: pointer;
+      font-size: 1.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.5;
+    }
+  }
+
+  &__tag {
+    &-box {
+      display: flex;
+      align-items: center;
+    }
+    padding: 0rem 0.5rem;
+    color: $color-primary;
+    background-color: $color-primary-light;
+  }
+}

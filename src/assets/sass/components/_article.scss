@@ -1,0 +1,134 @@
+.article {
+  margin-top: -0rem;
+  max-width: 114rem;
+  margin: 0rem auto;
+  margin-top: -25rem;
+  @include respond(tab-land) {
+    width: 80%;
+    margin-top: -5rem;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+
+      margin: 0 auto;
+    }
+  }
+  &__card {
+    width: 100%;
+    border-bottom: 1px solid $color-grey-dark-2;
+
+    &:hover {
+      .article__img-box {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &--top {
+      cursor: pointer;
+
+      display: flex;
+      gap: 2rem;
+    }
+
+    &--bottom {
+      width: 100%;
+      display: flex;
+      padding: 2rem 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__info {
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__status {
+    display: flex;
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    cursor: pointer;
+    font-size: $default-font-size;
+    margin-bottom: 2rem;
+    @include respond(tab-land) {
+      font-size: 2.6rem;
+    }
+  }
+  &__text {
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+
+  &__img-box {
+    width: 100%;
+    align-self: center;
+    overflow: hidden;
+    transform: translateY(1rem);
+  }
+
+  &__img {
+    width: 100%;
+    transition: all 0.5s;
+  }
+
+  &__caregory {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    span {
+      color: $color-primary;
+      display: inline-block;
+      margin: 0 1rem;
+    }
+  }
+
+  &__tag {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: $color-grey-light-1;
+    border-radius: 2rem;
+    font-size: $default-font-size;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__bookmark {
+    font-size: 2.5rem;
+    color: #ffb115;
+  }
+}

@@ -1,0 +1,126 @@
+.cooperators {
+  height: 100%;
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    max-width: 70rem;
+    @include respond(tab-land) {
+      max-width: 90rem;
+    }
+  }
+  .custom-swiper {
+    margin: 3rem 3rem;
+    @include respond(tab-land) {
+     margin: 0;
+    }
+  }
+  .swiper{
+    width: 100%;
+    @include respond(tab-land) {
+      margin: 0 auto;
+     }
+  }
+  display: flex;
+  width: 114rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include respond(tab-land) {
+    width: 90%;
+    flex-direction: column;
+  }
+  @include respond(tab-port) {
+    flex-direction: column;
+
+  }
+
+  gap: 3rem;
+  &__left {
+    flex: 1 0 70%;
+    ul {
+      list-style: none;
+      margin-left: -4rem;
+      @include respond(tab-land) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+    width: 100%;
+    padding: 1rem 2rem; 
+  }
+
+  &__img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  &__item {
+    margin: 1rem 1rem; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 1px $color-grey-dark-2;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+
+
+    &:hover {
+      box-shadow: 0 0 0 2px $color-grey-dark-2;
+    }
+  }
+  &__right {
+    width: 100%;
+  }
+  &__join {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 70%;
+    margin-top: 8rem;
+    background-color: $color-grey-light-1;
+    border-radius: 2rem;
+    padding: 3rem;
+  }
+
+  &__icon {
+    font-size: 3rem;
+  }
+
+  &__text {
+    font-size: 2.3rem;
+    text-align: center;
+    span {
+      margin-top: 1rem;
+      display: block;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: $default-font-size;
+    text-align: center;
+    border-radius: 1rem;
+    width: 100%;
+    color: $color-white;
+    padding: 1rem 1rem;
+    background-color: $color-primary;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #05ada2;
+    }
+
+    @include respond(tab-land) {
+      padding: 2rem 1rem;
+      font-size: 2rem;
+    }
+  }
+}

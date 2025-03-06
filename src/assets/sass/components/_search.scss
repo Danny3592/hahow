@@ -1,0 +1,59 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: -5rem;
+  &__icon {
+    font-size: 2rem;
+    color: #ddd;
+  }
+
+  &__close{
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+
+
+  &__smart-search{
+    display: block;
+    @include respond(phone){
+      display: none;
+    }
+  }
+  &__phone-icon {
+    font-size: 2rem;
+    color: #ddd;
+    margin-right: auto;
+    margin-left: 3rem;
+  }
+  
+
+  &__icon-box {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.6rem;
+  }
+  flex: 0 0 40%;
+  &__input {
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+    width: 90%;
+    margin-right: -4rem;
+    padding-left: 3.5rem;
+    border: 1px solid $color-grey-light-1;
+    outline: none;
+    &:focus {
+      border: none;
+    }
+  }
+  &__button {
+    background-color: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+    border: 1px solid $color-grey-light-1;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+  }
+}

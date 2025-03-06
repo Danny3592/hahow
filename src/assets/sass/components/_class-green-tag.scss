@@ -1,0 +1,15 @@
+.class-green-tag {
+  font-size: 1.4rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: $color-primary-light;
+  color: $color-primary;
+}
+
+.class-hot-tag {
+  display: inline-block;
+  font-size: $default-font-size;
+  padding: 0.3rem;
+  background-color: #fff5f5;
+  color: #f65f55;
+}

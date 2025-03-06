@@ -1,0 +1,166 @@
+.new-class {
+  .swiper-container {
+    position: relative;
+    width: 100%;
+  }
+  .custom-swiper {
+    &__custom--prev,
+    &__custom--next {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      cursor: pointer;
+      color: $color-primary;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-white;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      transition: all 0.2s;
+      box-shadow: 0 .5rem 3rem rgba($color-black, 0.3);
+    }
+    &__custom--prev:hover,
+    &__custom--next:hover {
+      color: $color-primary;
+    }
+    &__custom--prev {
+      left: -5%;
+    }
+    &__custom--next {
+      right: -5%;
+    }
+  }
+
+  &-box {
+    max-width: 114rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond(desktop){
+      max-width: 80%;
+    }
+  }
+  &__cards {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__card {
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__promote {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    display: inline-block;
+    background: #fa8c16;
+    color: $color-white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0 0 0.4rem 0;
+  }
+  &__card:hover {
+    .new-class__bookmark {
+      bottom: 2rem;
+    }
+  }
+
+  //////////
+  &__bookmark {
+    position: absolute;
+    font-size: 2.5rem;
+    right: 2rem;
+    z-index: 20;
+    bottom: -3rem;
+    transition: all 0.5s;
+  }
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  &__img {
+    transition: all 0.5s;
+    width: 100%;
+    border-radius: 1rem;
+  }
+  ///////////
+
+  &__title {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+  &__tag {
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $color-primary-light;
+    color: $color-primary;
+  }
+
+  &__author {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+
+  &__status {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__progressbar {
+    height: 5px;
+    margin: 1rem 0;
+    background-color: $color-primary;
+    width: 100%;
+  }
+
+  &__day {
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+
+  &__percentage {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+
+  &__price {
+    font-size: $default-font-size;
+    color: $color-grey-dark-1;
+  }
+
+  &__origin-price {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: $color-grey-dark-2;
+    text-decoration: line-through;
+  }
+
+  &__hot {
+    display: inline-block;
+    font-size: $default-font-size;
+    padding: 0.3rem;
+    background-color: #fff5f5;
+    color: #f65f55;
+  }
+  .header {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+}

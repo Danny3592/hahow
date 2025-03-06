@@ -1,0 +1,31 @@
+.section-header {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  .title {
+    display: inline-block;
+    &--main {
+      font-size: 2rem;
+      padding-right: 1rem;
+      border-right: 1px solid $color-grey-dark-2;
+      display: inline-block;
+    }
+    &--sub {
+      display: inline-block;
+      font-size: 1.4rem;
+      color: $color-grey-dark-2;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+
+    @include respond(tab-port) {
+      padding: 0rem 3rem;
+    }
+  }
+  .more {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+    cursor: pointer;
+  }
+}

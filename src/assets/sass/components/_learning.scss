@@ -1,0 +1,219 @@
+.learning {
+  background-color: #eee;
+  height: 25rem;
+  font-size: 3rem;
+  overflow-y: hidden;
+  padding-top: 3rem;
+  overflow-x: hidden;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    height: 48rem;
+  }
+  @include respond(tab-port) {
+    height: 50rem;
+  }
+  @include respond(phone) {
+    height: 40rem;
+  }
+
+ 
+h4 {
+  margin: 0 !important;
+}
+
+
+  &-box {
+    display: flex;
+    max-width: 114rem;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+  }
+  &__img--main {
+    width: 15rem;
+    height: 15rem;
+  }
+  &__chat {
+    display: flex;
+    position: relative;
+    @include respond(tab-land) {
+      align-items: center;
+      gap: 3rem;
+      padding-left: 5rem;
+    }
+  }
+  &__img-box--main {
+    transform: translateY(8.5rem);
+    @include respond(tab-land) {
+      height: 14rem;
+      transform: translateY(0rem);
+    }
+  }
+  &__chat-box {
+    position: relative;
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    a:visited,
+    a:link {
+      text-decoration: none;
+      color: $color-primary;
+    }
+    a:hover {
+      color: $color-primary-dark;
+    }
+    font-size: $default-font-size;
+    position: absolute;
+    bottom: 7.5rem;
+    left: 27rem;
+    i {
+      margin-left: 5px;
+    }
+
+    @include respond(tab-land) {
+      bottom: 8.5rem;
+      left: auto;
+      right: 10rem;
+    }
+    @include respond(phone) {
+      margin-top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 3rem;
+    flex: 1;
+    @include respond(tab-land) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    font-size: 1.8rem;
+    background: $color-white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      box-shadow: 0 2px 2rem rgba($color-black, 0.2);
+      img {
+        transform: scale(1.2);
+      }
+    }
+    @include respond(tab-land) {
+      width: 45%;
+    }
+  }
+
+  &__chat-box-phone {
+    display: none;
+    @include respond(tab-land) {
+      display: block;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__img-box {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    position: relative;
+    width: 100%;
+    i {
+      color: #fff;
+      z-index: 20;
+      font-size: 5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__progress {
+    display: inline-block;
+    position: relative;
+    flex: 1;
+    width: 60%;
+    height: 0.8rem;
+    background-color: $color-grey-light-1;
+    border-radius: 5px;
+    &--1::after {
+      width: 80%;
+    }
+    &--2::after {
+      width: 39%;
+    }
+    &--1::after,
+    &--2::after {
+      content: '';
+      border-radius: 5px;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      height: 0.8rem;
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 1.5rem;
+    transition: all 0.3s;
+    transform: scale(1);
+    filter: brightness(0.6);
+    &:hover {
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__stage {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  &__stage-text {
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: $default-font-size;
+    border-top: 1px solid #000;
+    i {
+      margin-right: 1rem;
+    }
+  }
+}

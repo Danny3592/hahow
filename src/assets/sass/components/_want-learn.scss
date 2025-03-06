@@ -1,0 +1,148 @@
+.want-learn {
+  &-box {
+    width: 114rem;
+    margin: 0 auto;
+  }
+  &__title {
+    &--main {
+      font-size: 2rem;
+      padding-right: 1rem;
+      border-right: 1px solid $color-grey-dark-2;
+    }
+    &--sub {
+      font-size: 1.4rem;
+      color: $color-grey-dark-2;
+      margin-left: 1rem;
+    }
+  }
+
+  &__more {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+  &__cards {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: start;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      padding: 0rem 3rem;
+    }
+  }
+
+  &__card {
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+
+  &__card:hover {
+    .want-learn__bookmark {
+      bottom: 2rem;
+    }
+  }
+  &__bookmark {
+    position: absolute;
+    font-size: 2.5rem;
+    right: 2rem;
+    z-index: 20;
+    bottom: -3rem;
+    transition: all 0.5s;
+  }
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    @include respond(tab-port) {
+      flex: 0 0 30%;
+    }
+    @include respond(460px) {
+      flex: 0 1 20%;
+    }
+
+  }
+
+  &__info-box {
+    @include respond(tab-port) {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+
+  &__img {
+    transition: all 0.5s;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+  &__tag {
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $color-primary-light;
+    color: $color-primary;
+    margin-right: 1rem;
+  }
+
+  &__author {
+    padding: 1rem 0;
+    font-size: $default-font-size;
+    color: $color-grey-dark-2;
+  }
+
+  &__status {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: $default-font-size;
+    i {
+      margin-right: 1rem;
+    }
+  }
+
+  &__day {
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+
+  &__percentage {
+    font-size: 1.4rem;
+    color: $color-grey-dark-2;
+  }
+
+  &__price {
+    display: inline-block;
+    font-size: $default-font-size;
+    color: $color-grey-dark-1;
+    padding: 1rem 0;
+  }
+
+  &__good {
+    display: inline-block;
+    font-size: $default-font-size;
+    padding: 0.3rem;
+    background-color: $color-primary-light;
+    color: $color-primary;
+  }
+  .header {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+}
