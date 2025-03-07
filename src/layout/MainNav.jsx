@@ -317,7 +317,7 @@ const MainNav = () => {
 
             <div className="user-nav__photo-box">
               <img
-                src="./src/assets/images/user.jpeg"
+                src="/images/user.jpeg"
                 alt=""
                 className="user-nav__photo"
               />
@@ -331,7 +331,7 @@ const MainNav = () => {
                   <div className="photo-pop__first-box">
                     <div className="photo-pop__user-info">
                       <div className="photo-pop__photo">
-                        <img src="../src/assets/images/user.jpeg" alt="" />
+                        <img src="/images/user.jpeg" alt="" />
                       </div>
                       <div className="photo-pop__user">
                         <div className="photo-pop__name">Danny Xiao</div>
