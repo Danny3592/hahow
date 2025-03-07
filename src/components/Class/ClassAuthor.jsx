@@ -4,8 +4,7 @@ const ClassAuthor = ({author}) => {
   return (
     <div
       style={{
-        padding: '1rem 0',
-        fontSize: '1.6rem',
+        fontSize: '1.2rem',
         color: '#B7B7B7',
       }}
     >
