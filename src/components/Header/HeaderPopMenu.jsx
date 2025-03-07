@@ -56,7 +56,7 @@ const RecursiveMenu = ({ categories, currentLayer, setLayerCount }) => {
 
             {category?.src && (
               <WantLearnCard
-                classProps="learning-card"
+                classProps="want-learning-card"
                 src={category?.src}
                 author={category?.author}
                 score={category?.score}

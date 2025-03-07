@@ -36,7 +36,7 @@ const MainNav = () => {
           <button className="nav-phone__explore">探索</button>
           <button className="nav-phone__about">
             <img
-              src="../src//assets/images/user.jpeg"
+              src="/images/user.jpeg"
               alt=""
               className="nav-phone__photo"
             />
@@ -102,7 +102,7 @@ const MainNav = () => {
         <nav className="nav">
           <div className="nav__logo-box">
             <img
-              src="./src/assets/images/logo.svg"
+              src="images/logo.svg"
               alt=""
               className="nav__logo"
             />
