@@ -97,21 +97,23 @@ const PickClass = () => {
               </SwiperSlide>
 
               <SwiperSlide>
-                <PickClassCard
+              <PickClassCard
                   classProps="pick-class"
-                  score="3.2"
-                  count="7"
-                  time="8"
-                  people="332"
-                  price="1,170"
+                  score="1.2"
+                  count="13"
+                  time="22"
+                  people="55"
+                  price="1,780"
                   getWhat={[
-                    '更精準找到客戶痛點/需求點/癢點，成為行動讀心機',
-                    '更有效率的發想、製作行銷提案企劃，省時間的同時更提高命中率',
-                    '更從容不迫地進行提報、說服客戶買單',
+                    '了解 SEO 流量從何而來',
+                    '了解搜尋引擎的運作邏輯',
+                    '了解如何找到有價值的關鍵字',
+                    '了解如何撰寫出一篇 SEO friendly 的文章',
+                    '了解 SEO 如何幫助你的品牌及網站',
                   ]}
-                  title="行銷提案實戰：讓你的想法被一次買單"
-                  img="https://images.hahow.in/images/66f3869961f430e24401c1b0"
-                  text="2025/02 全新內容！行銷提案實戰整理傑哥多年的提案經驗，透過關鍵溝通找對真正問題，並在提案中精準回應客戶需求。"
+                  title="SEO 白話文：不懂程式也能學會的 SEO 秘密"
+                  img="https://images.hahow.in/images/67bed569d7495476a7af5c5c"
+                  text="2025/02 更新內容！最好懂的 SEO 課程之一，幫助你建構 SEO 的運作自己的網站跟品牌中。"
                 />
               </SwiperSlide>
 
@@ -135,21 +137,23 @@ const PickClass = () => {
               </SwiperSlide>
 
               <SwiperSlide>
-                <PickClassCard
+              <PickClassCard
                   classProps="pick-class"
-                  score="3.2"
-                  count="7"
-                  time="8"
-                  people="332"
-                  price="1,170"
+                  score="1.2"
+                  count="13"
+                  time="22"
+                  people="55"
+                  price="1,780"
                   getWhat={[
-                    '更精準找到客戶痛點/需求點/癢點，成為行動讀心機',
-                    '更有效率的發想、製作行銷提案企劃，省時間的同時更提高命中率',
-                    '更從容不迫地進行提報、說服客戶買單',
+                    '了解 SEO 流量從何而來',
+                    '了解搜尋引擎的運作邏輯',
+                    '了解如何找到有價值的關鍵字',
+                    '了解如何撰寫出一篇 SEO friendly 的文章',
+                    '了解 SEO 如何幫助你的品牌及網站',
                   ]}
-                  title="行銷提案實戰：讓你的想法被一次買單"
-                  img="https://images.hahow.in/images/66f3869961f430e24401c1b0"
-                  text="2025/02 全新內容！行銷提案實戰整理傑哥多年的提案經驗，透過關鍵溝通找對真正問題，並在提案中精準回應客戶需求。"
+                  title="SEO 白話文：不懂程式也能學會的 SEO 秘密"
+                  img="https://images.hahow.in/images/67bed569d7495476a7af5c5c"
+                  text="2025/02 更新內容！最好懂的 SEO 課程之一，幫助你建構 SEO 的運作自己的網站跟品牌中。"
                 />
               </SwiperSlide>
               <SwiperSlide>

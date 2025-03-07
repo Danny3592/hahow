@@ -118,7 +118,7 @@ const MainNav = () => {
             </div>
           </div>
 
-          {!isDesktop && showSearchBar && (
+          {(isDesktop || (!isDesktop && showSearchBar)) && (
             <div className="search" style={{ zIndex: isDesktop ? '999' : '0' }}>
               <div className="search__icon-box">
                 <i className="fa-solid fa-magnifying-glass search__icon"></i>
@@ -135,12 +135,11 @@ const MainNav = () => {
                 ></i>
               </button>
               <i
-              className="fa-solid fa-xmark search__close"
-              onClick={() => setShowSearchBar(false)}
-            ></i>
+                className="fa-solid fa-xmark search__close"
+                onClick={() => setShowSearchBar(false)}
+              ></i>
             </div>
           )}
-        
 
           {!isDesktop && !showSearchBar && (
             <i
@@ -244,10 +243,6 @@ const MainNav = () => {
                       <div className="cart-pop__price">NT$1,200</div>
                     </div>
                   </div>
-
-                  {/* <div className="cart-pop__button-box">
-                <button className="cart-pop__button">前往我的學習</button>
-              </div> */}
                 </HeaderPop>
               </div>
             </div>
