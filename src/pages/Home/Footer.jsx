@@ -59,7 +59,7 @@ const Footer = () => {
               <a href="">影音製作服務</a>
             </li>
             <li>
-              <a href="">異業合作洽談</a>
+              <a href="">業界合作洽談</a>
             </li>
           </ul>
         </div>
@@ -68,16 +68,16 @@ const Footer = () => {
             <div className="footer__title">追蹤動態</div>
             <ul className="footer__list--action">
               <li className="footer__icon">
-                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-yahoo"></i>
+              </li>
+              <li className="footer__icon">
+                <i class="fa-brands fa-google"></i>
               </li>
               <li className="footer__icon">
                 <i class="fa-brands fa-facebook"></i>
               </li>
               <li className="footer__icon">
-                <i class="fa-brands fa-facebook"></i>
-              </li>
-              <li className="footer__icon">
-                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
               </li>
             </ul>
           </div>
