@@ -35,11 +35,7 @@ const MainNav = () => {
         <div className="nav-phone__tab">
           <button className="nav-phone__explore">探索</button>
           <button className="nav-phone__about">
-            <img
-              src="/images/user.jpeg"
-              alt=""
-              className="nav-phone__photo"
-            />
+            <img src="/images/user.jpeg" alt="" className="nav-phone__photo" />
             關於我
           </button>
         </div>
@@ -101,11 +97,7 @@ const MainNav = () => {
       <div className="nav-box">
         <nav className="nav">
           <div className="nav__logo-box">
-            <img
-              src="images/logo.svg"
-              alt=""
-              className="nav__logo"
-            />
+            <img src="images/logo.svg" alt="" className="nav__logo" />
           </div>
 
           <div className="category">
@@ -134,10 +126,12 @@ const MainNav = () => {
                   title="使用Hahow智慧搜尋"
                 ></i>
               </button>
-              <i
-                className="fa-solid fa-xmark search__close"
-                onClick={() => setShowSearchBar(false)}
-              ></i>
+              {!isDesktop && (
+                <i
+                  className="fa-solid fa-xmark search__close"
+                  onClick={() => setShowSearchBar(false)}
+                ></i>
+              )}
             </div>
           )}
 
@@ -316,11 +310,7 @@ const MainNav = () => {
             </div>
 
             <div className="user-nav__photo-box">
-              <img
-                src="/images/user.jpeg"
-                alt=""
-                className="user-nav__photo"
-              />
+              <img src="/images/user.jpeg" alt="" className="user-nav__photo" />
               <i className="fa-solid fa-caret-down user-nav__arr"></i>
               <HeaderPop
                 rootPositon={-4}
